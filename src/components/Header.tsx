@@ -1,21 +1,22 @@
-import { NavLink } from "react-router-dom";
 import TextInput from "./TextInput";
+import useStore, { TabKey } from "../store";
 
 const Header = () => {
+  const { currentTabKey, setCurrentTabKey } = useStore();
   return (
-    <div className="bg-sidebar text-sidebar-foreground p-4 flex items-center justify-between">
+    <div className="bg-sidebar text-sidebar-foreground p-4 pl-20 flex items-center justify-between fixed left-0 top-0 w-screen">
       <div className="flex items-center gap-6">
         {tabs.map((tab) => (
-          <NavLink
-            to={tab.url}
-            className={({ isActive }) =>
-              `cursor-pointer py-1 px-2  ${
-                isActive ? "bg-card rounded text-foreground" : ""
-              }`
-            }
+          <span
+            className={`cursor-pointer py-1 px-2  ${
+              currentTabKey === tab.name
+                ? "bg-card rounded-md text-foreground"
+                : ""
+            }`}
+            onClick={() => setCurrentTabKey(tab.name as TabKey)}
           >
             {tab.name}
-          </NavLink>
+          </span>
         ))}
       </div>
       <TextInput placeholder="Search" className="max-w-48" />
@@ -27,7 +28,7 @@ export default Header;
 
 const tabs = [
   {
-    name: "Charging Station",
+    name: "Charging Stations",
     url: ".",
   },
   {

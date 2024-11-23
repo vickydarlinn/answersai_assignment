@@ -10,7 +10,7 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const buttonClasses = `
-      rounded bg-primary border border-border text-primary-foreground hover:bg-primary/90 p-1
+      rounded bg-primary border border-border text-primary-foreground hover:bg-primary/90 px-2 py-1
     ${className}
   `;
 

@@ -11,12 +11,12 @@ const Drawer = ({ isOpen, onClose, children }: DrawerProps) => {
     <>
       <div
         onClick={onClose}
-        className={`fixed z-50 left-0 top-0 w-screen h-screen bg-black bg-opacity-50 transition-opacity duration-500 ${
+        className={`fixed z-50 left-0 top-0 w-screen h-screen backdrop-blur-sm bg-black bg-opacity-50 transition-opacity duration-500 ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
         <div
-          className={`bg-red-100 w-1/2 h-screen ml-auto overflow-auto transform transition-transform duration-500 ${
+          className={`p-5 pt-10 bg-sidebar w-1/2 h-screen ml-auto overflow-auto transform transition-transform duration-500 ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
           onClick={(e) => e.stopPropagation()}

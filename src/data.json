@@ -3,76 +3,124 @@
     "title": "Charging Station",
     "bestScenarioResults": [
       {
+        "id": 1,
         "description": "The best configuration based on profit is characterized by 11 zones with 48 total poles."
       },
       {
+        "id": 2,
         "description": "The best configuration based on satisfied demand is characterized by 11 zones with 48 total poles."
       }
     ],
     "graphs": {
-      "unsatisfiedDemand": {
-        "title": "Unsatisfied Demand %",
-        "currentValue": "$89.60k",
-        "percentage": "4.6% above target",
-        "dataPoints": [
-          { "month": "Apr", "value": 20000 },
-          { "month": "May", "value": 40000 },
-          { "month": "Jun", "value": 60000 },
-          { "month": "Jul", "value": 89600 },
-          { "month": "Aug", "value": 70000 },
-          { "month": "Sep", "value": 80000 },
-          { "month": "Oct", "value": 60000 }
-        ]
-      }
+      "dataPoints": [
+        { "id": 1, "month": "Apr", "value": 40000, "isVisible": true },
+        { "id": 2, "month": "MidApr", "value": 30000, "isVisible": false },
+        { "id": 3, "month": "May", "value": 20000, "isVisible": true },
+        { "id": 4, "month": "MidMay", "value": 35000, "isVisible": false },
+        { "id": 5, "month": "Jun", "value": 50000, "isVisible": true },
+        { "id": 6, "month": "MidJun", "value": 69800, "isVisible": false },
+        { "id": 7, "month": "Jul", "value": 89600, "isVisible": true },
+        { "id": 8, "month": "MidJul", "value": 74800, "isVisible": false },
+        { "id": 9, "month": "Aug", "value": 60000, "isVisible": true },
+        { "id": 10, "month": "MidAug", "value": 40000, "isVisible": false },
+        { "id": 11, "month": "Sep", "value": 20000, "isVisible": true },
+        { "id": 12, "month": "MidSep", "value": 30000, "isVisible": false },
+        { "id": 13, "month": "Oct", "value": 40000, "isVisible": true }
+      ]
     },
     "keyPerformanceIndicators": [
-      {
-        "name": "Infrastructure Units",
-        "value": "€421.07"
-      },
-      {
-        "name": "Charging Growth",
-        "value": "33.07%"
-      },
-      {
-        "name": "Localization change",
-        "value": "21.9%"
-      },
-      {
-        "name": "Fleet growth",
-        "value": "7.03%"
-      }
+      { "id": 1, "name": "Infrastructure Units", "value": "€421.07" },
+      { "id": 2, "name": "Charging Growth", "value": "33.07%" },
+      { "id": 3, "name": "Localization change", "value": "21.9%" },
+      { "id": 4, "name": "Fleet growth", "value": "7.03%" }
     ],
     "sidebar": {
       "title": "Edit Variables",
-      "searchPlaceholder": "Search variables",
       "categories": [
         {
+          "id": 1,
           "name": "Variable Category 1",
           "variables": [
             {
+              "id": 1,
               "name": "Carbon 1",
-              "hoverDescription": "Tracks emissions from charging stations."
+              "hoverDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias doloribus nobis sed rerum repudiandae asperiores voluptatem voluptas enim assumenda dicta eos aspernatur esse itaque veritatis eaque totam? Est assumenda, aperiam nesciunt veritatis fugiat dolor, aut fuga non eum consequuntur ut commodi recusandae libero vero dolorum temporibus neque magnam tempore",
+              "isSelected": false
             },
             {
+              "id": 2,
               "name": "Co2 Distribution",
-              "hoverDescription": "Measures the spatial distribution of CO2 emissions."
+              "hoverDescription": "Measures the spatial distribution of CO2 emissions. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias doloribus nobis sed rerum repudiandae asperiores voluptatem voluptas enim assumenda dicta eos aspernatur esse itaque veritatis eaque totam? Est assumenda, aperiam nesciunt veritatis fugiat dolor, aut fuga non eum consequuntur ut commodi recusandae libero vero dolorum temporibus neque magnam tempore",
+              "isSelected": false
             },
             {
+              "id": 3,
               "name": "Fleet sizing",
-              "hoverDescription": "Determines vehicle numbers to meet demand efficiently."
+              "hoverDescription": "Determines vehicle numbers to meet demand efficiently. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias doloribus nobis sed rerum repudiandae asperiores voluptatem voluptas enim assumenda dicta eos aspernatur esse itaque veritatis eaque totam? Est assumenda, aperiam nesciunt veritatis fugiat dolor, aut fuga non eum consequuntur ut commodi recusandae libero vero dolorum temporibus neque magnam tempore",
+              "isSelected": true
             }
           ]
-        }
-      ],
-      "buttons": [
-        {
-          "name": "Autofill",
-          "action": "autofill"
         },
         {
-          "name": "Rerun",
-          "action": "rerun"
+          "id": 2,
+          "name": "Variable Category 2",
+          "variables": [
+            {
+              "id": 1,
+              "name": "Carbon 1",
+              "hoverDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias doloribus nobis sed rerum repudiandae asperiores voluptatem voluptas enim assumenda dicta eos aspernatur esse itaque veritatis eaque totam? Est assumenda, aperiam nesciunt veritatis fugiat dolor, aut fuga non eum consequuntur ut commodi recusandae libero vero dolorum temporibus neque magnam tempore",
+              "isSelected": false
+            },
+            {
+              "id": 2,
+              "name": "Co2 Distribution",
+              "hoverDescription": "Measures the spatial distribution of CO2 emissions. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias doloribus nobis sed rerum repudiandae asperiores voluptatem voluptas enim assumenda dicta eos aspernatur esse itaque veritatis eaque totam? Est assumenda, aperiam nesciunt veritatis fugiat dolor, aut fuga non eum consequuntur ut commodi recusandae libero vero dolorum temporibus neque magnam tempore",
+              "isSelected": false
+            },
+            {
+              "id": 3,
+              "name": "Fleet sizing",
+              "hoverDescription": "Determines vehicle numbers to meet demand efficiently. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias doloribus nobis sed rerum repudiandae asperiores voluptatem voluptas enim assumenda dicta eos aspernatur esse itaque veritatis eaque totam? Est assumenda, aperiam nesciunt veritatis fugiat dolor, aut fuga non eum consequuntur ut commodi recusandae libero vero dolorum temporibus neque magnam tempore",
+              "isSelected": true
+            },
+            {
+              "id": 4,
+              "name": "Determines vehicle",
+              "hoverDescription": "Determines vehicle numbers to meet demand efficiently. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias doloribus nobis sed rerum repudiandae asperiores voluptatem voluptas enim assumenda dicta eos aspernatur esse itaque veritatis eaque totam? Est assumenda, aperiam nesciunt veritatis fugiat dolor, aut fuga non eum consequuntur ut commodi recusandae libero vero dolorum temporibus neque magnam tempore",
+              "isSelected": true
+            }
+          ]
+        },
+
+        {
+          "id": 3,
+          "name": "Variable Category 3",
+          "variables": [
+            {
+              "id": 1,
+              "name": "Carbon 1",
+              "hoverDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias doloribus nobis sed rerum repudiandae asperiores voluptatem voluptas enim assumenda dicta eos aspernatur esse itaque veritatis eaque totam? Est assumenda, aperiam nesciunt veritatis fugiat dolor, aut fuga non eum consequuntur ut commodi recusandae libero vero dolorum temporibus neque magnam tempore",
+              "isSelected": false
+            },
+            {
+              "id": 2,
+              "name": "Co2 Distribution Measures",
+              "hoverDescription": "Measures the spatial distribution of CO2 emissions. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias doloribus nobis sed rerum repudiandae asperiores voluptatem voluptas enim assumenda dicta eos aspernatur esse itaque veritatis eaque totam? Est assumenda, aperiam nesciunt veritatis fugiat dolor, aut fuga non eum consequuntur ut commodi recusandae libero vero dolorum temporibus neque magnam tempore",
+              "isSelected": false
+            },
+            {
+              "id": 3,
+              "name": "Fleet sizing",
+              "hoverDescription": "Determines vehicle numbers to meet demand efficiently. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias doloribus nobis sed rerum repudiandae asperiores voluptatem voluptas enim assumenda dicta eos aspernatur esse itaque veritatis eaque totam? Est assumenda, aperiam nesciunt veritatis fugiat dolor, aut fuga non eum consequuntur ut commodi recusandae libero vero dolorum temporibus neque magnam tempore",
+              "isSelected": true
+            },
+            {
+              "id": 4,
+              "name": "Determines vehicle",
+              "hoverDescription": "Determines vehicle numbers to meet demand efficiently. Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, molestias doloribus nobis sed rerum repudiandae asperiores voluptatem voluptas enim assumenda dicta eos aspernatur esse itaque veritatis eaque totam? Est assumenda, aperiam nesciunt veritatis fugiat dolor, aut fuga non eum consequuntur ut commodi recusandae libero vero dolorum temporibus neque magnam tempore",
+              "isSelected": true
+            }
+          ]
         }
       ]
     }
@@ -81,76 +129,59 @@
     "title": "Fleet Sizing",
     "bestScenarioResults": [
       {
-        "description": "The best configuration based on profit is characterized by 11 zones with 48 total poles."
+        "id": 1,
+        "description": "Optimal fleet size ensures minimal idle time and high vehicle utilization with 250 vehicles across 15 routes."
       },
       {
-        "description": "The best configuration based on satisfied demand is characterized by 11 zones with 48 total poles."
+        "id": 2,
+        "description": "Maximizing revenue involves 280 vehicles operating across 20 zones with high-frequency trips."
       }
     ],
     "graphs": {
-      "unsatisfiedDemand": {
-        "title": "Unsatisfied Demand %",
-        "currentValue": "$89.60k",
-        "percentage": "4.6% above target",
-        "dataPoints": [
-          { "month": "Apr", "value": 20000 },
-          { "month": "May", "value": 40000 },
-          { "month": "Jun", "value": 60000 },
-          { "month": "Jul", "value": 89600 },
-          { "month": "Aug", "value": 70000 },
-          { "month": "Sep", "value": 80000 },
-          { "month": "Oct", "value": 60000 }
-        ]
-      }
+      "dataPoints": [
+        { "id": 1, "month": "Apr", "value": 25000, "isVisible": true },
+        { "id": 2, "month": "MidApr", "value": 16000, "isVisible": false },
+        { "id": 3, "month": "May", "value": 70000, "isVisible": true },
+        { "id": 4, "month": "MidMay", "value": 16500, "isVisible": false },
+        { "id": 5, "month": "Jun", "value": 17500, "isVisible": true },
+        { "id": 6, "month": "MidJun", "value": 18500, "isVisible": false },
+        { "id": 7, "month": "Jul", "value": 94000, "isVisible": true },
+        { "id": 8, "month": "MidJul", "value": 20000, "isVisible": false },
+        { "id": 9, "month": "Aug", "value": 60000, "isVisible": true }
+      ]
     },
     "keyPerformanceIndicators": [
-      {
-        "name": "Infrastructure Units",
-        "value": "€421.07"
-      },
-      {
-        "name": "Charging Growth",
-        "value": "33.07%"
-      },
-      {
-        "name": "Localization change",
-        "value": "21.9%"
-      },
-      {
-        "name": "Fleet growth",
-        "value": "7.03%"
-      }
+      { "id": 1, "name": "Fleet Utilization", "value": "85.00%" },
+      { "id": 2, "name": "Average Trips per Day", "value": "1,200" },
+      { "id": 3, "name": "Idle Time Reduction", "value": "12.3%" },
+      { "id": 4, "name": "Cost Efficiency", "value": "€320.50 per vehicle" }
     ],
     "sidebar": {
       "title": "Edit Variables",
-      "searchPlaceholder": "Search variables",
       "categories": [
         {
-          "name": "Variable Category 1",
+          "id": 1,
+          "name": "Variable Category A",
           "variables": [
             {
-              "name": "Carbon 1",
-              "hoverDescription": "Tracks emissions from charging stations."
+              "id": 1,
+              "name": "Operational Costs",
+              "hoverDescription": "Details fleet operational costs. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos placeat, numquam modi quasi reiciendis atque quibusdam eum! Facere, ratione cumque magnam sed fuga repudiandae perspiciatis a quis obcaecati ipsam praesentium.",
+              "isSelected": false
             },
             {
-              "name": "Co2 Distribution",
-              "hoverDescription": "Measures the spatial distribution of CO2 emissions."
+              "id": 2,
+              "name": "Fleet Turnover",
+              "hoverDescription": "Measures fleet turnover rate. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos placeat, numquam modi quasi reiciendis atque quibusdam eum! Facere, ratione cumque magnam sed fuga repudiandae perspiciatis a quis obcaecati ipsam praesentium.",
+              "isSelected": true
             },
             {
-              "name": "Fleet sizing",
-              "hoverDescription": "Determines vehicle numbers to meet demand efficiently."
+              "id": 3,
+              "name": "Route Efficiency",
+              "hoverDescription": "Analyzes efficiency of routes. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos placeat, numquam modi quasi reiciendis atque quibusdam eum! Facere, ratione cumque magnam sed fuga repudiandae perspiciatis a quis obcaecati ipsam praesentium.",
+              "isSelected": true
             }
           ]
-        }
-      ],
-      "buttons": [
-        {
-          "name": "Autofill",
-          "action": "autofill"
-        },
-        {
-          "name": "Rerun",
-          "action": "rerun"
         }
       ]
     }
@@ -159,76 +190,59 @@
     "title": "Parking",
     "bestScenarioResults": [
       {
-        "description": "The best configuration based on profit is characterized by 11 zones with 48 total poles."
+        "id": 1,
+        "description": "The ideal parking configuration minimizes congestion and maximizes revenue with 120 spots in 10 strategic locations."
       },
       {
-        "description": "The best configuration based on satisfied demand is characterized by 11 zones with 48 total poles."
+        "id": 2,
+        "description": "High efficiency parking ensures quick access to hubs with 150 spots distributed evenly across urban zones."
       }
     ],
     "graphs": {
-      "unsatisfiedDemand": {
-        "title": "Unsatisfied Demand %",
-        "currentValue": "$89.60k",
-        "percentage": "4.6% above target",
-        "dataPoints": [
-          { "month": "Apr", "value": 20000 },
-          { "month": "May", "value": 40000 },
-          { "month": "Jun", "value": 60000 },
-          { "month": "Jul", "value": 89600 },
-          { "month": "Aug", "value": 70000 },
-          { "month": "Sep", "value": 80000 },
-          { "month": "Oct", "value": 60000 }
-        ]
-      }
+      "dataPoints": [
+        { "id": 1, "month": "Apr", "value": 30000, "isVisible": true },
+        { "id": 2, "month": "MidApr", "value": 32000, "isVisible": false },
+        { "id": 3, "month": "May", "value": 34000, "isVisible": true },
+        { "id": 4, "month": "MidMay", "value": 76000, "isVisible": false },
+        { "id": 5, "month": "Jun", "value": 38000, "isVisible": true },
+        { "id": 6, "month": "MidJun", "value": 40000, "isVisible": false },
+        { "id": 7, "month": "Jul", "value": 92000, "isVisible": true },
+        { "id": 8, "month": "MidJul", "value": 44000, "isVisible": false },
+        { "id": 9, "month": "Aug", "value": 46000, "isVisible": true }
+      ]
     },
     "keyPerformanceIndicators": [
-      {
-        "name": "Infrastructure Units",
-        "value": "€421.07"
-      },
-      {
-        "name": "Charging Growth",
-        "value": "33.07%"
-      },
-      {
-        "name": "Localization change",
-        "value": "21.9%"
-      },
-      {
-        "name": "Fleet growth",
-        "value": "7.03%"
-      }
+      { "id": 1, "name": "Spot Occupancy Rate", "value": "78.5%" },
+      { "id": 2, "name": "Revenue per Spot", "value": "€150.75" },
+      { "id": 3, "name": "Average Turnover Time", "value": "2 hours" },
+      { "id": 4, "name": "Customer Satisfaction", "value": "89.4%" }
     ],
     "sidebar": {
       "title": "Edit Variables",
-      "searchPlaceholder": "Search variables",
       "categories": [
         {
-          "name": "Variable Category 1",
+          "id": 1,
+          "name": "Variable Category B",
           "variables": [
             {
-              "name": "Carbon 1",
-              "hoverDescription": "Tracks emissions from charging stations."
+              "id": 1,
+              "name": "Demand Forecasting",
+              "hoverDescription": "Estimates future parking demand. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos placeat, numquam modi quasi reiciendis atque quibusdam eum! Facere, ratione cumque magnam sed fuga repudiandae perspiciatis a quis obcaecati ipsam praesentium.",
+              "isSelected": false
             },
             {
-              "name": "Co2 Distribution",
-              "hoverDescription": "Measures the spatial distribution of CO2 emissions."
+              "id": 2,
+              "name": "Revenue Optimization",
+              "hoverDescription": "Optimizes parking revenue streams. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos placeat, numquam modi quasi reiciendis atque quibusdam eum! Facere, ratione cumque magnam sed fuga repudiandae perspiciatis a quis obcaecati ipsam praesentium.",
+              "isSelected": true
             },
             {
-              "name": "Fleet sizing",
-              "hoverDescription": "Determines vehicle numbers to meet demand efficiently."
+              "id": 3,
+              "name": "Congestion Control",
+              "hoverDescription": "Measures congestion reduction effectiveness. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos placeat, numquam modi quasi reiciendis atque quibusdam eum! Facere, ratione cumque magnam sed fuga repudiandae perspiciatis a quis obcaecati ipsam praesentium.",
+              "isSelected": true
             }
           ]
-        }
-      ],
-      "buttons": [
-        {
-          "name": "Autofill",
-          "action": "autofill"
-        },
-        {
-          "name": "Rerun",
-          "action": "rerun"
         }
       ]
     }

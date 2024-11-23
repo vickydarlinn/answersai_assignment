@@ -2,13 +2,14 @@ import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 import data from "../data.json";
 
-type DataType = typeof data;
-type TabKey = keyof DataType;
+export type DataType = typeof data;
+export type TabKey = keyof DataType;
 
 interface StoreState {
   currentTabKey: TabKey;
   selectedData: DataType[TabKey];
   setCurrentTabKey: (key: TabKey) => void;
+  toggleVariableSelection: (categoryId: number, variableId: number) => void;
 }
 
 const useStore = create<StoreState>()(
@@ -20,6 +21,34 @@ const useStore = create<StoreState>()(
         currentTabKey: key,
         selectedData: data[key],
       })),
+    toggleVariableSelection: (categoryId, variableId) =>
+      set((state) => {
+        const updatedCategories = state.selectedData.sidebar.categories.map(
+          (category) => {
+            if (category.id === categoryId) {
+              return {
+                ...category,
+                variables: category.variables.map((variable) =>
+                  variable.id === variableId
+                    ? { ...variable, isSelected: !variable.isSelected }
+                    : variable
+                ),
+              };
+            }
+            return category;
+          }
+        );
+
+        return {
+          selectedData: {
+            ...state.selectedData,
+            sidebar: {
+              ...state.selectedData.sidebar,
+              categories: updatedCategories,
+            },
+          },
+        };
+      }),
   }))
 );
 

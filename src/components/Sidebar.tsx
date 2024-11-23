@@ -9,9 +9,9 @@ import { NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="bg-sidebar text-sidebar-foreground w-16 flex h-screen flex-col items-center gap-10 p-2 pt-5">
+    <div className="bg-sidebar text-sidebar-foreground w-16 flex h-screen flex-col items-center gap-5 p-2 pt-5 fixed left-0 top-0 z-10">
       <GiHamburgerMenu className=" cursor-pointer " size={20} />
-      <div className="flex items-center flex-col gap-5  p-2 ">
+      <div className="flex items-center flex-col gap-5 ">
         {navButtons.map((nav) => (
           <NavLink
             to={nav.url}
@@ -25,7 +25,7 @@ const Sidebar = () => {
           </NavLink>
         ))}
       </div>
-      <FaUserCircle className="mt-auto" size={20} />
+      <FaUserCircle className="mt-auto mb-4" size={20} />
     </div>
   );
 };

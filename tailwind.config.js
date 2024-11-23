@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       colors: {
         background: "hsl(var(--background))",
+
         foreground: "hsl(var(--foreground))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
@@ -30,6 +31,9 @@ module.exports = {
       },
       fontSize: {
         "3.5xl": "2rem",
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"], // Set 'Inter' as a default sans-serif font
       },
     },
   },

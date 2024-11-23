@@ -7,46 +7,53 @@ import {
   ResponsiveContainer,
   Area,
   AreaChart,
+  ReferenceLine,
 } from "recharts";
+import { GoQuestion } from "react-icons/go";
+import { FaArrowUp } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const CustomTooltip: React.FC<any> = ({ active, payload }) => {
   if (active && payload && payload.length) {
     const value = payload[0].value;
-    const aboveTarget = (((value as number) - 80000) / 80000) * 100;
+    const aboveTarget = (((value as number) - 80000) / 80000) * 100; // Example target comparison
     return (
-      <div
-        style={{
-          backgroundColor: "#1E1E1E",
-          color: "#C1F512",
-          padding: "10px",
-          borderRadius: "8px",
-          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-        }}
-      >
-        <p style={{ margin: 0, fontSize: "14px" }}>
+      <div className="bg-card border border-border p-3 rounded shadow-lg">
+        <p className="text-primary-foreground flex justify-between items-center">
           <strong>${((value as number) / 1000).toFixed(2)}k</strong>
+          <GoQuestion />
         </p>
-        <p
-          style={{
-            margin: 0,
-            fontSize: "12px",
-            color: aboveTarget >= 0 ? "#90EE90" : "#FF6F61",
-          }}
-        >
-          {aboveTarget >= 0 ? "↑" : "↓"} {Math.abs(aboveTarget).toFixed(1)}%{" "}
-          {aboveTarget >= 0 ? "above" : "below"} target
-        </p>
+        <div className="mt-2 text-sm flex">
+          <div
+            className={` border  p-[2px] rounded-full ${
+              aboveTarget >= 0
+                ? "text-secondary-foreground border-secondary-foreground"
+                : ""
+            }`}
+          >
+            {aboveTarget >= 0 ? <FaArrowUp /> : <FaArrowDown />}
+          </div>
+          <span className="ml-2">
+            {Math.abs(aboveTarget).toFixed(1)}%{" "}
+            {aboveTarget >= 0 ? "above" : "below"} target
+          </span>
+        </div>
       </div>
     );
   }
   return null;
 };
 
-interface ChartProps {
-  data: { month: string; value: number }[];
-}
-const CustomChart = ({ data }: ChartProps) => {
+const CustomChart = ({
+  data,
+}: {
+  data: {
+    month: string;
+    value: number;
+    isVisible: boolean;
+  }[];
+}) => {
   return (
     <ResponsiveContainer width="100%" height={400}>
       <AreaChart
@@ -59,25 +66,75 @@ const CustomChart = ({ data }: ChartProps) => {
             <stop offset="100%" stopColor="#C1F512" stopOpacity={0} />
           </linearGradient>
         </defs>
-        <CartesianGrid strokeDasharray="3 3" stroke="#444" />
-        <XAxis dataKey="month" stroke="#888" />
+        <CartesianGrid vertical={false} stroke="#343434" />
+        <XAxis
+          dataKey="month"
+          stroke="#575757"
+          strokeWidth={0.7}
+          tickFormatter={(month, index) => (data[index].isVisible ? month : "")}
+          tickSize={0}
+          tickMargin={10}
+          fontSize={12.5}
+          fontWeight={500}
+          color="#FFFFFF"
+          padding={{ right: 30 }}
+        />
         <YAxis
+          ticks={[20000, 40000, 60000, 80000, 100000]}
           tickFormatter={(value) => `$${value / 1000}K`}
-          stroke="#888"
-          domain={[0, 100000]}
+          stroke="#575757"
+          strokeWidth={0.7}
+          tickSize={0}
+          tickMargin={10}
+          fontSize={12.5}
+          fontWeight={500}
+          color="#FFFFFF"
         />
         <Tooltip
           content={<CustomTooltip />}
-          cursor={{ stroke: "#C1F512", strokeDasharray: "3 3" }}
+          cursor={{ stroke: "#C8E972", strokeDasharray: "3 3", strokeWidth: 3 }}
         />
         <Area
           dataKey="value"
-          stroke="#C1F512"
+          stroke="#C8E972"
           fill="url(#colorFill)"
-          strokeWidth={2}
-          dot={{ fill: "#C1F512", r: 5 }}
+          strokeWidth={3}
+          dot={({ cx, cy, payload }) => {
+            if (payload.isVisible) {
+              return (
+                <circle
+                  cx={cx}
+                  cy={cy}
+                  r={8}
+                  fill="white"
+                  stroke="#C1F512"
+                  strokeWidth={3}
+                />
+              );
+            }
+            return <circle cx={cx} cy={cy} r={0} strokeWidth={0} />;
+          }}
           activeDot={{ r: 8 }}
         />
+        {data.map((point, index) => {
+          return (
+            index > 0 && (
+              <ReferenceLine
+                segment={[
+                  { x: point.month, y: 0 },
+                  {
+                    x: point.month,
+                    y: point.value - (point.isVisible ? 2500 : 500),
+                  },
+                ]}
+                stroke="#8AA14F"
+                strokeWidth={3}
+                strokeOpacity={0.3}
+                isFront={false}
+              />
+            )
+          );
+        })}
       </AreaChart>
     </ResponsiveContainer>
   );

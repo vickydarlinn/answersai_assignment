@@ -4,13 +4,15 @@ import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
   return (
-    <main className="flex">
+    <>
       <Sidebar />
-      <div className="grow overflow-hidden rounded-md">
+      <div className=" pl-16 grow overflow-hidden rounded-md">
         <Header />
-        <Outlet />
+        <main className="pt-16">
+          <Outlet />
+        </main>
       </div>
-    </main>
+    </>
   );
 };
 
