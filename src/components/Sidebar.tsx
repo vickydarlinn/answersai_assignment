@@ -16,8 +16,8 @@ const Sidebar = () => {
           <NavLink
             to={nav.url}
             className={({ isActive }) =>
-              `cursor-pointer p-1  ${
-                isActive ? "bg-red-300 rounded-md text-foreground" : ""
+              `cursor-pointer p-2  ${
+                isActive ? "bg-card rounded-md text-foreground" : ""
               }`
             }
           >

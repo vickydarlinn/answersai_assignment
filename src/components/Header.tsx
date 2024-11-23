@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import TextInput from "./TextInput";
 
 const Header = () => {
   return (
@@ -8,8 +9,8 @@ const Header = () => {
           <NavLink
             to={tab.url}
             className={({ isActive }) =>
-              `cursor-pointer p-1  ${
-                isActive ? "bg-red-300 rounded-md text-foreground" : ""
+              `cursor-pointer py-1 px-2  ${
+                isActive ? "bg-card rounded text-foreground" : ""
               }`
             }
           >
@@ -17,7 +18,7 @@ const Header = () => {
           </NavLink>
         ))}
       </div>
-      <input type="text" placeholder="Search" />
+      <TextInput placeholder="Search" className="max-w-48" />
     </div>
   );
 };
