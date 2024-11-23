@@ -1,16 +1,7 @@
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";
 import data from "../data.json";
-
-export type DataType = typeof data;
-export type TabKey = keyof DataType;
-
-interface StoreState {
-  currentTabKey: TabKey;
-  selectedData: DataType[TabKey];
-  setCurrentTabKey: (key: TabKey) => void;
-  toggleVariableSelection: (categoryId: number, variableId: number) => void;
-}
+import { TabKey, StoreState } from "../types";
 
 const useStore = create<StoreState>()(
   devtools((set) => ({

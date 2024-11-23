@@ -1,5 +1,6 @@
 import TextInput from "./TextInput";
-import useStore, { TabKey } from "../store";
+import useStore from "../store";
+import { TabKey } from "../types";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Sidebar from "./Sidebar";
 import { useState } from "react";
