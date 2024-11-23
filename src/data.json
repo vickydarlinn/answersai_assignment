@@ -1,0 +1,212 @@
+{
+  "Charging Stations": {
+    "title": "Charging Station",
+    "bestScenarioResults": [
+      {
+        "description": "The best configuration based on profit is characterized by 11 zones with 48 total poles."
+      },
+      {
+        "description": "The best configuration based on satisfied demand is characterized by 11 zones with 48 total poles."
+      }
+    ],
+    "graphs": {
+      "unsatisfiedDemand": {
+        "title": "Unsatisfied Demand %",
+        "currentValue": "$89.60k",
+        "percentage": "4.6% above target",
+        "dataPoints": [
+          { "month": "Apr", "value": 20000 },
+          { "month": "May", "value": 40000 },
+          { "month": "Jun", "value": 60000 },
+          { "month": "Jul", "value": 89600 },
+          { "month": "Aug", "value": 70000 },
+          { "month": "Sep", "value": 80000 },
+          { "month": "Oct", "value": 60000 }
+        ]
+      }
+    },
+    "keyPerformanceIndicators": [
+      {
+        "name": "Infrastructure Units",
+        "value": "€421.07"
+      },
+      {
+        "name": "Charging Growth",
+        "value": "33.07%"
+      },
+      {
+        "name": "Localization change",
+        "value": "21.9%"
+      },
+      {
+        "name": "Fleet growth",
+        "value": "7.03%"
+      }
+    ],
+    "sidebar": {
+      "title": "Edit Variables",
+      "searchPlaceholder": "Search variables",
+      "categories": [
+        {
+          "name": "Variable Category 1",
+          "variables": [
+            {
+              "name": "Carbon 1",
+              "hoverDescription": "Tracks emissions from charging stations."
+            },
+            {
+              "name": "Co2 Distribution",
+              "hoverDescription": "Measures the spatial distribution of CO2 emissions."
+            },
+            {
+              "name": "Fleet sizing",
+              "hoverDescription": "Determines vehicle numbers to meet demand efficiently."
+            }
+          ]
+        }
+      ],
+      "buttons": [
+        {
+          "name": "Autofill",
+          "action": "autofill"
+        },
+        {
+          "name": "Rerun",
+          "action": "rerun"
+        }
+      ]
+    }
+  },
+  "Fleet Sizing": {
+    "title": "Fleet Sizing",
+    "scenarioSummary": {
+      "optimalFleetSize": 350,
+      "demandSatisfaction": "95%",
+      "profitIncrease": "12%"
+    },
+    "graphs": {
+      "fleetUtilization": {
+        "title": "Fleet Utilization Rate",
+        "currentValue": "78%",
+        "dataPoints": [
+          { "month": "Apr", "value": 65 },
+          { "month": "May", "value": 70 },
+          { "month": "Jun", "value": 75 },
+          { "month": "Jul", "value": 78 },
+          { "month": "Aug", "value": 77 },
+          { "month": "Sep", "value": 79 },
+          { "month": "Oct", "value": 78 }
+        ]
+      }
+    },
+    "keyPerformanceIndicators": [
+      {
+        "name": "Optimal Fleet Size",
+        "value": 350
+      },
+      {
+        "name": "Demand Satisfaction",
+        "value": "95%"
+      },
+      {
+        "name": "Profit Increase",
+        "value": "12%"
+      }
+    ],
+    "sidebar": {
+      "title": "Edit Variables",
+      "searchPlaceholder": "Search fleet variables",
+      "categories": [
+        {
+          "name": "Variable Category 1",
+          "variables": [
+            {
+              "name": "Fleet Demand",
+              "hoverDescription": "Represents the overall demand for fleet utilization."
+            },
+            {
+              "name": "Fleet Capacity",
+              "hoverDescription": "Indicates the total capacity of the fleet in operation."
+            }
+          ]
+        }
+      ],
+      "buttons": [
+        {
+          "name": "Autofill",
+          "action": "autofill"
+        },
+        {
+          "name": "Rerun",
+          "action": "rerun"
+        }
+      ]
+    }
+  },
+  "Parking": {
+    "title": "Parking",
+    "availabilitySummary": {
+      "zonesWithParking": 8,
+      "avgOccupancyRate": "85%",
+      "revenueGenerated": "$120k"
+    },
+    "graphs": {
+      "occupancyRate": {
+        "title": "Parking Occupancy Rate",
+        "currentValue": "85%",
+        "dataPoints": [
+          { "month": "Apr", "value": 80 },
+          { "month": "May", "value": 82 },
+          { "month": "Jun", "value": 83 },
+          { "month": "Jul", "value": 85 },
+          { "month": "Aug", "value": 86 },
+          { "month": "Sep", "value": 87 },
+          { "month": "Oct", "value": 85 }
+        ]
+      }
+    },
+    "keyPerformanceIndicators": [
+      {
+        "name": "Zones with Parking",
+        "value": 8
+      },
+      {
+        "name": "Average Occupancy Rate",
+        "value": "85%"
+      },
+      {
+        "name": "Revenue Generated",
+        "value": "$120k"
+      }
+    ],
+    "sidebar": {
+      "title": "Edit Parking Variables",
+      "searchPlaceholder": "Search parking variables",
+      "categories": [
+        {
+          "name": "Variable Category 1",
+          "variables": [
+            {
+              "name": "Occupancy Rate",
+              "hoverDescription": "Represents the percentage of occupied parking spaces."
+            },
+            {
+              "name": "Revenue per Zone",
+              "hoverDescription": "Tracks revenue generated per parking zone."
+            }
+          ]
+        }
+      ],
+      "buttons": [
+        {
+          "name": "Autofill",
+          "action": "autofill"
+        },
+        {
+          "name": "Rerun",
+          "action": "rerun"
+        }
+      ]
+    }
+  }
+}
