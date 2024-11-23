@@ -16,7 +16,7 @@ const Drawer = ({ isOpen, onClose, children }: DrawerProps) => {
         }`}
       >
         <div
-          className={`p-5 pt-10 bg-sidebar w-1/2 h-screen ml-auto overflow-auto transform transition-transform duration-500 ${
+          className={`p-5 pt-10 bg-sidebar w-screen sm:w-4/5 lg:w-1/2 h-screen ml-auto overflow-auto transform transition-transform duration-500 ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
           onClick={(e) => e.stopPropagation()}

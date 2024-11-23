@@ -6,9 +6,9 @@ const MainLayout = () => {
   return (
     <>
       <Sidebar />
-      <div className=" pl-16 grow overflow-hidden rounded-md">
+      <div className=" sm:pl-16 grow overflow-hidden rounded-md">
         <Header />
-        <main className="pt-16">
+        <main className="md:pt-16 pt-36">
           <Outlet />
         </main>
       </div>
