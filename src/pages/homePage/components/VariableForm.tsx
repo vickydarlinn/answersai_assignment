@@ -30,7 +30,7 @@ const VariableForm = ({ onClose }: VariableFormProps) => {
       setHoveredVariable(variable);
     }, 1500);
     console.log(timer);
-    setHoverTimer(timer);
+    setHoverTimer(timer as unknown as number);
   };
 
   const handleMouseLeave = () => {
