@@ -10,3 +10,14 @@ export interface StoreState {
   setCurrentTabKey: (key: TabKey) => void;
   toggleVariableSelection: (categoryId: number, variableId: number) => void;
 }
+
+export interface AuthState {
+  user: null | User;
+  setUser: (user: User) => void;
+  logout: () => void;
+}
+
+export interface User {
+  displayName: string;
+  email: string;
+}

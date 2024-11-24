@@ -1,8 +1,14 @@
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet } from "react-router-dom";
+import { useAuthStore } from "../store";
 
 const MainLayout = () => {
+  const { user } = useAuthStore();
+
+  if (user === null) {
+    return <Navigate to="/login" replace />;
+  }
   return (
     <>
       <Sidebar />

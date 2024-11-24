@@ -1,5 +1,5 @@
 import Button from "../../components/Button";
-import useStore from "../../store";
+import { useStore } from "../../store";
 import { FaHistory } from "react-icons/fa";
 import { FiUpload } from "react-icons/fi";
 import { BsLightningChargeFill } from "react-icons/bs";
@@ -17,7 +17,7 @@ import { FaEdit } from "react-icons/fa";
 
 const HomePage = () => {
   const { selectedData } = useStore();
-  const [isEditing, setIsEditing] = useState(true);
+  const [isEditing, setIsEditing] = useState(false);
 
   const handleClose = () => {
     setIsEditing(false);

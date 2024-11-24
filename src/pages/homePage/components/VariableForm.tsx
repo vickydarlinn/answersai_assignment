@@ -2,7 +2,7 @@ import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import TextInput from "../../../components/TextInput";
 import Button from "../../../components/Button";
-import useStore from "../../../store";
+import { useStore } from "../../../store";
 import Card from "../../../components/Card";
 import { BsStars } from "react-icons/bs";
 import { TbReload } from "react-icons/tb";

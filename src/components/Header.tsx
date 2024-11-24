@@ -1,5 +1,5 @@
 import TextInput from "./TextInput";
-import useStore from "../store";
+import { useStore } from "../store";
 import { TabKey } from "../types";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Sidebar from "./Sidebar";
@@ -11,10 +11,10 @@ const Header = () => {
   return (
     <>
       <div className="z-10 bg-sidebar text-sidebar-foreground p-4 sm:pl-20 flex md:flex-row  flex-col-reverse items-center gap-5 justify-between fixed left-0 top-0 w-screen">
-        <div className="flex items-center gap-6">
+        <div className="flex items-center justify-between sm:justify-start   w-full sm:w-auto sm:gap-6 gap:2  flex-wrap">
           {tabs.map((tab) => (
             <span
-              className={`cursor-pointer py-1 px-2  ${
+              className={`cursor-pointer py-1 sm:px-2  ${
                 currentTabKey === tab.name
                   ? "bg-card rounded-md text-foreground"
                   : ""
