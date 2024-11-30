@@ -12,9 +12,9 @@ const MainLayout = () => {
   return (
     <>
       <Sidebar />
-      <div className=" sm:pl-16 grow overflow-hidden rounded-md">
+      <div className="md:pl-20 sm:pl-16 ">
         <Header />
-        <main className="md:pt-16 pt-36">
+        <main className="md:pt-20 pt-32 ">
           <Outlet />
         </main>
       </div>

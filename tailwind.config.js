@@ -32,8 +32,12 @@ module.exports = {
       fontSize: {
         "3.5xl": "2rem",
       },
+      lineHeight: {
+        "3.5xl": ["2rem", "3rem"],
+      },
       fontFamily: {
-        sans: ["Inter", "sans-serif"], // Set 'Inter' as a default sans-serif font
+        sans: ["Inter", "sans-serif"],
+        roobert: ["roobert"],
       },
     },
   },

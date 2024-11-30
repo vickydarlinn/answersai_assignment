@@ -8,7 +8,8 @@ import { BsStars } from "react-icons/bs";
 import { TbReload } from "react-icons/tb";
 import { FaPlus } from "react-icons/fa6";
 import { FaCheck } from "react-icons/fa6";
-import { IoInformationCircleSharp } from "react-icons/io5";
+import { IoMdInformationCircleOutline } from "react-icons/io";
+
 import { IoIosArrowDown } from "react-icons/io";
 
 interface variable {
@@ -47,17 +48,17 @@ const VariableForm = ({ onClose }: VariableFormProps) => {
 
   return (
     <>
-      <div className="flex justify-between my-5 text-2xl">
+      <div className="flex justify-between my-5 text-2xl font-medium">
         <span>{selectedData.sidebar.title}</span>
         <IoClose onClick={onClose} className="cursor-pointer" />
       </div>
       <div className="flex gap-2 my-5">
         <TextInput />
-        <Button className=" flex items-center gap-1">
+        <Button className=" flex !px-5 items-center gap-1">
           <BsStars />
           Autofill
         </Button>
-        <Button className="flex items-center gap-1 text-secondary-foreground border border-secondary">
+        <Button className="flex !px-5 bg-[#23291E] items-center gap-1 text-secondary-foreground border border-secondary">
           <TbReload />
           Rerun
         </Button>
@@ -70,7 +71,9 @@ const VariableForm = ({ onClose }: VariableFormProps) => {
         <div className=" ">
           {selectedData.sidebar.categories.map((category) => (
             <div key={category.name} className="my-4">
-              <span className="block font-medium">{category.name}</span>
+              <span className="block font-medium text-[0.9375rem]">
+                {category.name}
+              </span>
               <div className="flex gap-5 mt-2 flex-wrap">
                 {category.variables.map((variable) => (
                   <div
@@ -78,7 +81,7 @@ const VariableForm = ({ onClose }: VariableFormProps) => {
                     className={`rounded-2xl flex items-center gap-3 text-sm border border-border py-1 px-3 cursor-pointer ${
                       variable.isSelected
                         ? "border-secondary-foreground bg-[#282e16] text-secondary-foreground"
-                        : ""
+                        : "bg-[#5959594D]"
                     }`}
                     onMouseEnter={() => handleMouseEnter(variable)}
                     onMouseLeave={handleMouseLeave}
@@ -108,7 +111,7 @@ const VariableForm = ({ onClose }: VariableFormProps) => {
         >
           <h4 className=" flex items-center gap-2 text-primary-foreground my-3">
             <span>{hoveredVariable.name}</span>
-            <IoInformationCircleSharp />
+            <IoMdInformationCircleOutline />
           </h4>
           <p className="text-sm"> {hoveredVariable.hoverDescription}</p>
         </Card>

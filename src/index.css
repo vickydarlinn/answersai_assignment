@@ -4,6 +4,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "roobert";
+  src: url("./assets/fonts/RoobertTRIAL.ttf");
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 80%;
+  }
+}
+
 @layer base {
   :root {
     --background: 240, 4%, 9%, 1;

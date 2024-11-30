@@ -69,7 +69,7 @@ const CustomChart = ({
         <CartesianGrid vertical={false} stroke="#343434" />
         <XAxis
           dataKey="month"
-          stroke="#575757"
+          stroke="#FFFFFF"
           strokeWidth={0.7}
           tickFormatter={(month, index) => (data[index].isVisible ? month : "")}
           tickSize={0}
@@ -82,7 +82,7 @@ const CustomChart = ({
         <YAxis
           ticks={[20000, 40000, 60000, 80000, 100000]}
           tickFormatter={(value) => `$${value / 1000}K`}
-          stroke="#575757"
+          stroke="#FFFFFF"
           strokeWidth={0.7}
           tickSize={0}
           tickMargin={10}
